@@ -1,5 +1,5 @@
-from game_engine import Game
+from thehouse import TheHouse
 
-thehouse = Game()
+thehouse = TheHouse()
 
 thehouse.play_game()
