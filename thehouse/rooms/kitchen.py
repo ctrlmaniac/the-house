@@ -11,3 +11,17 @@ class Kitchen(Room):
         print_pause("In front of you there's a window")
 
         self.move()
+
+    """ FORWARD """
+
+    def forward(self):
+        print_pause("You look outside of the window.")
+        print_pause("There's nothing to see...")
+        print_pause("You go back.")
+
+        self.move()
+
+    """ RIGHT """
+
+    def right(self):
+        self.thehouse.rooms["hall"].center()
