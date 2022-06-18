@@ -48,7 +48,7 @@ class Livingroom(Room):
                 damage = random.randint(2, 4)
 
             print_pause(f"You deal {damage} damage.")
-            self.monster.loose_health()
+            self.monster.loose_health(damage)
 
             print_pause("It's the monster's turn to deal damages!")
             self.monster.deals_damage()
