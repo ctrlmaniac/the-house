@@ -30,3 +30,16 @@ class Bedroom(Room):
             print_pause("You go back.")
 
         self.move()
+
+    """ RIGHT """
+
+    def right(self):
+        print_pause("You look outside of the window.")
+        print_pause("Outside it's pitch black!")
+        print_pause("There's something that moves in the darkness")
+        print_pause("It's moving so fast that you barely can see it...")
+        print_pause("You wonder how could you escape this house")
+        print_pause("And if it's safe outside either...", 3)
+        print_pause("You go back.")
+
+        self.move()
