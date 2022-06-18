@@ -9,7 +9,7 @@ from .studio import Studio
 
 __all__ = [
     "Bedroom",
-    "DiningRoom",
+    "Diningroom",
     "Hall",
     "Hallway",
     "Kitchen",
