@@ -1,7 +1,9 @@
 from helpers import print_pause
 
+from .room import Room
 
-class Hallway:
+
+class Hallway(Room):
     def center(self):
         print_pause("You are in the hallway.")
         print_pause("Behind you there's a door.")

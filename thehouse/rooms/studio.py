@@ -2,8 +2,10 @@ import random
 
 from helpers import print_pause, validate_input
 
+from .room import Room
 
-class Studio:
+
+class Studio(Room):
     def __init__(self, player):
         self.player = player
         self.lights = random.choice([True, False])
@@ -36,21 +38,6 @@ class Studio:
                     "But you sense there's something " "that want to reach your hand..."
                 )
                 self.player.loose_health()
-
-    def move(self):
-        choice = validate_input(
-            'Type "right", "left", "forward" or "backward": ',
-            ["right", "left", "forward", "backward"],
-        )
-
-        if choice == "right":
-            self.right()
-        elif choice == "left":
-            self.left()
-        elif choice == "backward":
-            self.backward()
-        elif choice == "forward":
-            self.forward()
 
     """ CENTER """
 
