@@ -1,5 +1,6 @@
-from .room import Room
 from helpers import print_pause
+
+from .room import Room
 
 
 class Hall(Room):

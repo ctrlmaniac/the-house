@@ -1,4 +1,4 @@
-from helpers import validate_input, print_pause
+from helpers import print_pause, validate_input
 
 
 class Room:
