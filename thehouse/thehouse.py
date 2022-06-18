@@ -21,7 +21,7 @@ class TheHouse:
 
     def play_game(self):
         while not self.player.escaped or self.player.is_alive():
-            print_pause("=== THE HOUSE ===\n\n", 3)
+            print_pause("\n\n=== THE HOUSE ===\n\n", 3)
 
             print_pause("You open your eyes and find yourself lying on the floor")
             print_pause("Your head is pounding and it hurts")
