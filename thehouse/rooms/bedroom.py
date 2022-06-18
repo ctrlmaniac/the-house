@@ -1,4 +1,4 @@
-from helpers.print_pause import print_pause, validate_input
+from helpers import print_pause, validate_input
 from .room import Room
 
 
@@ -18,7 +18,7 @@ class Bedroom(Room):
         print_pause("You look tired.")
         print_pause("Do you want to rest a little bit?")
 
-        choice = validate_input("Type yes or no", ["yes", "no"])
+        choice = validate_input("Type yes or no: ", ["yes", "no"])
 
         if choice == "yes":
             print_pause("You've decided to rest.", 5)
