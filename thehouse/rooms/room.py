@@ -22,7 +22,7 @@ class Room:
         print_pause("Where do you want to go?")
 
         choice = validate_input(
-            'Type "right", "left", "forward" or "backward": ',
+            'Type "forward", "right", "backward", "left": ',
             ["right", "left", "forward", "backward"],
         )
 

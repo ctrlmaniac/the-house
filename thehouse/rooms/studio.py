@@ -18,15 +18,15 @@ class Studio(Room):
         print_pause("You hear something lurking in the dark")
         print_pause("You defenetly want to turn the lights on.")
         print_pause("You extend your arms to:")
-        print_pause("- the right")
-        print_pause("- the left")
         print_pause("- forward")
+        print_pause("- the right")
         print_pause("- backward")
+        print_pause("- the left")
 
         while self.player.health > 0:
             choice = validate_input(
-                "Type right, left, forward or backward: ",
-                ["right", "left", "backward", "forward"],
+                'Type "forward", "right", "backward", "left": ',
+                ["right", "left", "forward", "backward"],
             )
 
             if choice == switch_position:
@@ -35,7 +35,7 @@ class Studio(Room):
             else:
                 print_pause("There's nothing here!")
                 print_pause(
-                    "But you sense there's something " "that want to reach your hand..."
+                    "But you sense there's something that want to reach your hand..."
                 )
                 self.player.loose_health()
 
@@ -51,10 +51,10 @@ class Studio(Room):
 
         if self.player.is_alive():
             print_pause("You're in the middle of a studio")
+            print_pause("In front of you there's a closed door.")
+            print_pause("On your right there's a window.")
             print_pause("Behind you there's a desk with some papers on it.")
             print_pause("On your left there's a shelf with many books on it.")
-            print_pause("On your right there's a window.")
-            print_pause("In front of you there's a closed door.")
 
             self.move()
 
