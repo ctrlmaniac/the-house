@@ -1,7 +1,7 @@
-from characters import Player
-from helpers import print_pause, validate_input
+from .characters import Player
+from .helpers import print_pause, validate_input
 
-from thehouse import TheHouse
+from .thehouse import TheHouse
 
 
 def play():
