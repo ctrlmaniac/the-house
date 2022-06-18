@@ -9,6 +9,7 @@ class TheHouse:
         self.rooms = {
             "studio": rooms.Studio(self.player),
         }
+        self.current_room = None
 
     def play_game(self):
         while not self.player.escaped or self.player.is_alive():
@@ -18,7 +19,9 @@ class TheHouse:
             print_pause("Your head is pounding and it hurts")
             print_pause("With a lot of effort you stand up")
 
-            self.rooms["studio"].center()
+            self.current_room = "studio"
+
+            self.rooms[self.current_room].center()
 
             if not self.player.is_alive():
                 random_death()
