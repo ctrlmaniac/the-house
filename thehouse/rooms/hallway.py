@@ -27,3 +27,8 @@ class Hallway(Room):
             self.move()
         else:
             studio.center()
+
+    """ FORWARD """
+
+    def forward(self):
+        self.thehouse.rooms["hall"].center()
