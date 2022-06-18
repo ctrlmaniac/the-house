@@ -1,6 +1,6 @@
 import rooms
 
-from helpers import print_pause, validate_input, random_death
+from helpers import random_death
 
 
 class TheHouse:
@@ -9,17 +9,6 @@ class TheHouse:
         self.rooms = {
             "studio": rooms.Studio(self.player),
         }
-
-    def play_again(self):
-        print_pause("Do you want to play again the game?")
-
-        choice = validate_input("Type yes or no: ", ["yes", "no"])
-
-        if choice == "yes":
-            # bug: doesn't work properly
-            self.play_game()
-        else:
-            quit()
 
     def play_game(self):
         while not self.player.escaped or self.player.is_alive():
@@ -32,5 +21,3 @@ class TheHouse:
             if self.player.escaped:
                 print("Congratulations! You beat the game!")
                 break
-
-        self.play_again()
