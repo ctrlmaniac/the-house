@@ -11,3 +11,19 @@ class Hallway(Room):
         print_pause("On your right there's a little table and a door.")
         print_pause("In front of you there's the hall of the house.")
         print_pause("Where do you want to go?")
+
+        self.move()
+
+    """ BACKWARD """
+
+    def backward(self):
+        studio = self.thehouse.rooms["studio"]
+
+        if studio.door_locked:
+            print_pause("The door is locked!")
+            print_pause("It seems you have to find the key!")
+            print_pause("You go back.")
+
+            self.move()
+        else:
+            studio.center()
