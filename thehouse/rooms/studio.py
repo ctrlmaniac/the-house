@@ -170,4 +170,6 @@ class Studio:
             print_pause("You hear something from the other side of the door!")
             print_pause("You instantly go back!")
             self.player.loose_health()
-            self.move()
+
+            if self.player.is_alive():
+                self.move()
