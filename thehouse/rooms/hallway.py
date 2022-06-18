@@ -32,7 +32,7 @@ class Hallway(Room):
     def forward(self):
         self.thehouse.rooms["hall"].center()
 
-    """ LEFT """
+    """ RIGHT """
 
-    def left(self):
+    def right(self):
         self.thehouse.rooms["bedroom"].center()
