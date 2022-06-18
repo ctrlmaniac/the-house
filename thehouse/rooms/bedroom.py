@@ -21,7 +21,10 @@ class Bedroom(Room):
         choice = validate_input("Type yes or no: ", ["yes", "no"])
 
         if choice == "yes":
-            print_pause("You've decided to rest.", 5)
+            print_pause("You've decided to rest.", 2)
+            print_pause(".", 2)
+            print_pause(".", 2)
+            print_pause(".", 2)
             self.player.restore_health()
         else:
             print_pause("You go back.")
