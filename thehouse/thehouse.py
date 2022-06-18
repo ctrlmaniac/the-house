@@ -1,4 +1,5 @@
 import rooms
+import random
 
 from helpers import print_pause, random_death
 
@@ -8,8 +9,9 @@ class TheHouse:
         self.player = player
         self.rooms = {
             "studio": rooms.Studio(self.player),
+            "hallway": rooms.Hallway(),
         }
-        self.current_room = None
+        self.current_room = random.choice(list(self.rooms.keys()))
 
     def play_game(self):
         while not self.player.escaped or self.player.is_alive():
@@ -18,8 +20,6 @@ class TheHouse:
             print_pause("You open your eyes and find yourself lying on the floor")
             print_pause("Your head is pounding and it hurts")
             print_pause("With a lot of effort you stand up")
-
-            self.current_room = "studio"
 
             self.rooms[self.current_room].center()
 
