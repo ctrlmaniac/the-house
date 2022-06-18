@@ -10,6 +10,9 @@ classifiers = [
     "Topic :: Games/Entertainment"
 ]
 
+[tool.poetry.scripts]
+thehouse = "thehouse.play:play"
+
 [tool.isort]
 profile = "black"
 
