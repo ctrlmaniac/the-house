@@ -22,9 +22,15 @@ class TheHouse:
             quit()
 
     def play_game(self):
-        while self.player.is_alive():
+        while not self.player.escaped or self.player.is_alive():
             self.rooms["studio"].intro()
-        else:
-            print("You died!")
+
+            if not self.player.is_alive():
+                print("You died")
+                break
+
+            if self.player.escaped:
+                print("Congratulations! You beat the game!")
+                break
 
         self.play_again()

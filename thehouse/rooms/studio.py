@@ -160,7 +160,7 @@ class Studio:
             if self.key:
                 print_pause("You use the key to unlock the door")
                 print_pause("You exit the studio and finally can escape the house!")
-                quit()
+                self.player.escape_the_house()
             else:
                 print_pause("The door is loked.")
                 print_pause("It seems you need a key to open it!")

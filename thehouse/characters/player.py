@@ -7,6 +7,7 @@ class Player:
     def __init__(self):
         self.max_health = random.randint(5, 10)
         self.health = self.max_health
+        self.escaped = False
 
     def loose_health(self):
         self.health -= 1
@@ -16,3 +17,6 @@ class Player:
 
     def is_alive(self):
         return True if self.health > 0 else False
+
+    def escape_the_house(self):
+        self.escaped = True
