@@ -1,4 +1,4 @@
-from thehouse.helpers.print_pause import print_pause
+from helpers.print_pause import print_pause
 from .room import Room
 
 
