@@ -6,10 +6,9 @@ from .room import Room
 
 
 class Studio(Room):
-    def __init__(self, player):
-        self.player = player
+    def __init__(self, player, thehouse):
+        super().__init__(player, thehouse)
         self.lights = random.choice([True, False])
-        self.key = False
         self.door_locked = True
 
     def prompt_light(self):
@@ -100,7 +99,7 @@ class Studio(Room):
         )
 
     def book_arkhams_secrets(self):
-        if self.key:
+        if "key_studio" in self.player.items:
             print_pause("West of Arkham the hills rise wild,")
             print_pause("and there are valleys with deep")
             print_pause("woods that no axe has ever cut.")
@@ -134,7 +133,7 @@ class Studio(Room):
 
     def forward(self):
         if not self.door_locked:
-            self.player.escape_the_house()
+            self.thehouse.rooms["hallway"].center()
         else:
             print_pause("There's a closed door in front of you")
             print_pause("Do you want to try open it?")
@@ -144,8 +143,8 @@ class Studio(Room):
             if choice == "yes":
                 if "key_studio" in self.player.items:
                     print_pause("You use the key to unlock the door")
-                    print_pause("You exit the studio and finally can escape the house!")
-                    self.player.escape_the_house()
+                    print_pause("You exit the studio.")
+                    self.thehouse.rooms["hallway"].center()
                 else:
                     print_pause("The door is loked.")
                     print_pause("It seems you need a key to open it!")

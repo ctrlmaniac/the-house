@@ -10,8 +10,8 @@ class TheHouse:
     def __init__(self, player):
         self.player = player
         self.rooms = {
-            "studio": rooms.Studio(self.player),
-            # "hallway": rooms.Hallway(),
+            "studio": rooms.Studio(self.player, self),
+            "hallway": rooms.Hallway(self.player, self),
         }
         self.current_room = random.choice(list(self.rooms.keys()))
 

@@ -2,6 +2,10 @@ from helpers import validate_input
 
 
 class Room:
+    def __init__(self, player, thehouse):
+        self.player = player
+        self.thehouse = thehouse
+
     def right(self):
         pass
 
