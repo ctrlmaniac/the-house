@@ -54,7 +54,6 @@ class Studio(Room):
             print_pause("On your left there's a shelf with many books on it.")
             print_pause("On your right there's a window.")
             print_pause("In front of you there's a closed door.")
-            print_pause("What are you gonna do?")
 
             self.move()
 

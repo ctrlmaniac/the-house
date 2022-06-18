@@ -10,7 +10,6 @@ class Hallway(Room):
         print_pause("On your left there's a door and two paintings.")
         print_pause("On your right there's a little table and a door.")
         print_pause("In front of you there's the hall of the house.")
-        print_pause("Where do you want to go?")
 
         self.move()
 

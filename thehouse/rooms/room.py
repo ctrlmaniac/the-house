@@ -1,4 +1,4 @@
-from helpers import validate_input
+from helpers import validate_input, print_pause
 
 
 class Room:
@@ -19,6 +19,8 @@ class Room:
         pass
 
     def move(self):
+        print_pause("Where do you want to go?")
+
         choice = validate_input(
             'Type "right", "left", "forward" or "backward": ',
             ["right", "left", "forward", "backward"],
