@@ -1,6 +1,6 @@
 import rooms
 
-from helpers import print_pause, validate_input
+from helpers import print_pause, validate_input, random_death
 
 
 class TheHouse:
@@ -26,7 +26,7 @@ class TheHouse:
             self.rooms["studio"].intro()
 
             if not self.player.is_alive():
-                print("You died")
+                random_death()
                 break
 
             if self.player.escaped:
