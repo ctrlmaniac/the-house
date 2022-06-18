@@ -75,13 +75,19 @@ class Studio:
         self.move()
 
     def right(self):
-        print("the right")
+        print_pause("On your right there's a window.")
+        print_pause("You have a glimpse outside but it's pitch black.")
+        print_pause("You can't see anything interesting here.")
+        print_pause("You go back.")
+        self.move()
+
+    def backward(self):
+        print_pause("The desk is so full of papers")
+        print_pause("There's nothing particular here. You go back.")
+        self.move()
 
     def left(self):
         print("left")
-
-    def backward(self):
-        print("back")
 
     def forward(self):
         print("forward")
