@@ -12,6 +12,11 @@ class Bedroom(Room):
 
         self.move()
 
+    """ LEFT """
+
+    def left(self):
+        self.thehouse.rooms["hallway"].center()
+
     """ BACKWARD """
 
     def backward(self):
