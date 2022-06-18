@@ -7,9 +7,6 @@ class Player(Character):
         self.escaped = False
         self.items = []
 
-    def is_alive(self):
-        return True if self.health > 0 else False
-
     def escape_the_house(self):
         self.escaped = True
 

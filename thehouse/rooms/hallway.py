@@ -36,3 +36,8 @@ class Hallway(Room):
 
     def right(self):
         self.thehouse.rooms["bedroom"].center()
+
+    """ LEFT """
+
+    def left(self):
+        self.thehouse.rooms["livingroom"].center()

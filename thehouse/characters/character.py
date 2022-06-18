@@ -8,6 +8,9 @@ class Character:
         self.max_health = random.randint(5, 10)
         self.health = self.max_health
 
+    def is_alive(self):
+        return True if self.health > 0 else False
+
     def loose_health(self, damage=1):
         self.health -= damage
         self.print_health()

@@ -12,4 +12,3 @@ class Monster(Character):
         damage = random.randint(1, 2)
 
         self.player.loose_health(damage)
-        self.print_health()
