@@ -8,6 +8,7 @@ class Studio:
         self.player = player
         self.lights = random.choice([True, False])
         self.key = False
+        self.door_locked = True
 
     def prompt_light(self):
         switch_position = random.choice(["right", "left", "forward", "backward"])
@@ -145,25 +146,28 @@ class Studio:
     """ FORWARD """
 
     def forward(self):
-        print_pause("There's a closed door in front of you")
-        print_pause("Do you want to try open it?")
-
-        choice = validate_input("Type yes or no: ", ["yes", "no"])
-
-        if choice == "yes":
-            if self.key:
-                print_pause("You use the key to unlock the door")
-                print_pause("You exit the studio and finally can escape the house!")
-                self.player.escape_the_house()
-            else:
-                print_pause("The door is loked.")
-                print_pause("It seems you need a key to open it!")
-                print_pause("You go back.")
-                self.move()
+        if not self.door_locked:
+            self.player.escape_the_house()
         else:
-            print_pause("You hear something from the other side of the door!")
-            print_pause("You instantly go back!")
-            self.player.loose_health()
+            print_pause("There's a closed door in front of you")
+            print_pause("Do you want to try open it?")
 
-            if self.player.is_alive():
-                self.move()
+            choice = validate_input("Type yes or no: ", ["yes", "no"])
+
+            if choice == "yes":
+                if self.key:
+                    print_pause("You use the key to unlock the door")
+                    print_pause("You exit the studio and finally can escape the house!")
+                    self.player.escape_the_house()
+                else:
+                    print_pause("The door is loked.")
+                    print_pause("It seems you need a key to open it!")
+                    print_pause("You go back.")
+                    self.move()
+            else:
+                print_pause("You hear something from the other side of the door!")
+                print_pause("You instantly go back!")
+                self.player.loose_health()
+
+                if self.player.is_alive():
+                    self.move()
