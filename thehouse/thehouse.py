@@ -16,6 +16,7 @@ class TheHouse:
         choice = validate_input("Type yes or no: ", ["yes", "no"])
 
         if choice == "yes":
+            # bug: doesn't work properly
             self.play_game()
         else:
             quit()
