@@ -127,7 +127,7 @@ class Studio:
             print_pause("You open the book and a key fall onto the ground.")
             print_pause("You pick the key.")
             self.key = True
-            self.move()
+            self.pick_a_book()
 
     def pick_a_book(self):
         print_pause("You pick a book:")
