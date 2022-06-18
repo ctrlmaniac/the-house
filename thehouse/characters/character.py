@@ -8,8 +8,8 @@ class Character:
         self.max_health = random.randint(5, 10)
         self.health = self.max_health
 
-    def loose_health(self):
-        self.health -= 1
+    def loose_health(self, damage=1):
+        self.health -= damage
         self.print_health()
 
     def restore_health(self):
