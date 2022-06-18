@@ -34,7 +34,7 @@ class Studio:
 
                 if choice == switch_position:
                     print_pause("You've turned the lights on!")
-                    break
+                    self.center()
                 else:
                     print_pause("There's nothing here!")
                     print_pause(
@@ -42,3 +42,14 @@ class Studio:
                         "that want to reach your hand..."
                     )
                     self.player.loose_health()
+        else:
+            self.center()
+
+    def center(self):
+        print_pause("You're in the middle of a studio")
+        print_pause("Behind you there's a desk with some papers on it.")
+        print_pause("On your left there's a shelf with many books on it.")
+        print_pause("On your right there's a window.")
+        print_pause("In front of you there's a closed door.")
+        print_pause("What are you gonna do?")
+        quit()

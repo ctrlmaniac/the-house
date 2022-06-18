@@ -13,3 +13,6 @@ class Player:
         health = "*" * self.health
         pt_lost = "-" * (self.max_health - self.health)
         print_pause(f"Health: {health}{pt_lost}")
+
+    def is_alive(self):
+        return True if self.health > 0 else False
