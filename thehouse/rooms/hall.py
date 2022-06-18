@@ -23,3 +23,18 @@ class Hall(Room):
     def left(self):
         print_pause("You open the door and enter the room")
         self.thehouse.rooms["kitchen"].center()
+
+    """ FORWARD """
+
+    def forward(self):
+        if (
+            "thehouse_key_1" in self.player.items
+            and "thehouse_key_2" in self.player.items
+            and "thehouse_key_3" in self.player.items
+        ):
+            print_pause("You unlock the door and finally exit the house!")
+        else:
+            print_pause("You need three keys to open the door!")
+            print_pause("You go back.")
+
+            self.move()
