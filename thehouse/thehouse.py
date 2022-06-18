@@ -1,6 +1,6 @@
-import rooms
 import random
 
+import rooms
 from helpers import print_pause, random_death
 
 
