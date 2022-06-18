@@ -13,6 +13,7 @@ class TheHouse:
             "studio": rooms.Studio(self.player, self),
             "hallway": rooms.Hallway(self.player, self),
             "hall": rooms.Hall(self.player, self),
+            "bedroom": rooms.Bedroom(self.player, self),
         }
         self.current_room = random.choice(list(self.rooms.keys()))
 
