@@ -1,4 +1,5 @@
 from .bedroom import Bedroom
+from .diningroom import Diningroom
 from .hall import Hall
 from .hallway import Hallway
 from .kitchen import Kitchen
@@ -8,6 +9,7 @@ from .studio import Studio
 
 __all__ = [
     "Bedroom",
+    "DiningRoom",
     "Hall",
     "Hallway",
     "Kitchen",

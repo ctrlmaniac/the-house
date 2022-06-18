@@ -16,6 +16,7 @@ class TheHouse:
             "bedroom": rooms.Bedroom(self.player, self),
             "livingroom": rooms.Livingroom(self.player, self),
             "kitchen": rooms.Kitchen(self.player, self),
+            "diningroom": rooms.Diningroom(self.player, self),
         }
         self.current_room = random.choice(list(self.rooms.keys()))
 
