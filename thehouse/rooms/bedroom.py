@@ -69,8 +69,6 @@ class Bedroom(Room):
         self.pick_a_drawer()
 
     def pick_a_drawer(self):
-        print(self.key_in_drawer)
-
         choice = validate_input(
             "Type a number between 1 and 5 included, or back: ",
             ["1", "2", "3", "4", "5", "back"],
