@@ -1,3 +1,5 @@
+from __future__ import absolute_import
+
 from characters import Player
 from helpers import print_pause, validate_input
 
