@@ -7,6 +7,7 @@ class Studio:
     def __init__(self, player):
         self.player = player
         self.lights = random.choice([True, False])
+        self.key = False
 
     def prompt_light(self):
         switch_position = random.choice(["right", "left", "forward", "backward"])
@@ -64,6 +65,8 @@ class Studio:
         elif choice == "forward":
             self.forward()
 
+    """ CENTER """
+
     def center(self):
         print_pause("You're in the middle of a studio")
         print_pause("Behind you there's a desk with some papers on it.")
@@ -74,6 +77,8 @@ class Studio:
 
         self.move()
 
+    """ RIGHT """
+
     def right(self):
         print_pause("On your right there's a window.")
         print_pause("You have a glimpse outside but it's pitch black.")
@@ -81,13 +86,69 @@ class Studio:
         print_pause("You go back.")
         self.move()
 
+    """ BACKWARD """
+
     def backward(self):
         print_pause("The desk is so full of papers")
         print_pause("There's nothing particular here. You go back.")
         self.move()
 
+    """ LEFT """
+
     def left(self):
-        print("left")
+        print_pause("On your left there's a shelf full of books.")
+        print_pause(
+            "You run your finger through the dusty books "
+            "and rapidly read the titles."
+        )
+        print_pause("There are so many books in this shelf.")
+        print_pause("You wonder yourself if you've ever read this amount of books")
+
+        self.pick_a_book()
+
+    def book_divine_comedy(self):
+        print_pause("Amor, ch’a nullo amato amar perdona,")
+        print_pause("mi prese del costui piacer sì forte,")
+        print_pause("che, come vedi, ancor non m’abbandona")
+
+    def book_the_king_in_yellow(self):
+        print_pause(
+            "for I knew that the King in Yellow had opened his "
+            "tattered mantle and there was only God to cry to now."
+        )
+
+    def book_arkhams_secrets(self):
+        if self.key:
+            print_pause("West of Arkham the hills rise wild,")
+            print_pause("and there are valleys with deep")
+            print_pause("woods that no axe has ever cut.")
+            self.pick_a_book()
+        else:
+            print_pause("You open the book and a key fall onto the ground.")
+            print_pause("You pick the key.")
+            self.key = True
+            self.move()
+
+    def pick_a_book(self):
+        print_pause("You pick a book:")
+        print_pause("1. Divine Comedy")
+        print_pause("2. The King in Yellow")
+        print_pause("3. Arkham's Secrets")
+
+        choice = validate_input("Type 1, 2, 3, or back: ", ["1", "2", "3", "back"])
+
+        if choice == "1":
+            self.book_divine_comedy()
+            self.pick_a_book()
+        elif choice == "2":
+            self.book_the_king_in_yellow()
+            self.pick_a_book()
+        elif choice == "3":
+            self.book_arkhams_secrets()
+        elif choice == "back":
+            self.move()
+
+    """ FORWARD """
 
     def forward(self):
-        print("forward")
+        print(f"Has Key: {self.key}")
