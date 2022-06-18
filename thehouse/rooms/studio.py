@@ -62,7 +62,7 @@ class Studio(Room):
     """ BACKWARD """
 
     def backward(self):
-        print_pause("On your right there's a window.")
+        print_pause("On your back there's a window.")
         print_pause("You have a glimpse outside but it's pitch black.")
         print_pause("You can't see anything interesting here.")
         print_pause("You go back.")
@@ -108,7 +108,7 @@ class Studio(Room):
         else:
             print_pause("You open the book and a key fall onto the ground.")
             print_pause("You pick the key.")
-            self.key = True
+            self.player.pick_an_item("key_studio")
             self.pick_a_book()
 
     def pick_a_book(self):
@@ -142,7 +142,7 @@ class Studio(Room):
             choice = validate_input("Type yes or no: ", ["yes", "no"])
 
             if choice == "yes":
-                if self.key:
+                if "key_studio" in self.player.items:
                     print_pause("You use the key to unlock the door")
                     print_pause("You exit the studio and finally can escape the house!")
                     self.player.escape_the_house()

@@ -8,6 +8,7 @@ class Player:
         self.max_health = random.randint(5, 10)
         self.health = self.max_health
         self.escaped = False
+        self.items = []
 
     def loose_health(self):
         self.health -= 1
@@ -20,3 +21,6 @@ class Player:
 
     def escape_the_house(self):
         self.escaped = True
+
+    def pick_an_item(self, item):
+        self.items.append(item)
