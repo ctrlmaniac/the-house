@@ -9,7 +9,7 @@ class TheHouse:
         self.player = player
         self.rooms = {
             "studio": rooms.Studio(self.player),
-            "hallway": rooms.Hallway(),
+            # "hallway": rooms.Hallway(),
         }
         self.current_room = random.choice(list(self.rooms.keys()))
 
