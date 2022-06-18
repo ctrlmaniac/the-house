@@ -11,8 +11,6 @@ class Studio:
     def intro(self):
         lights = "on" if self.lights else "off"
         switch_position = random.choice(["right", "left", "forward", "backward"])
-        guesses = 0
-        chances = random.randint(2, 3)
 
         print_pause("You open your eyes and find yourself lying on the floor")
         print_pause("Your head is pounding and it hurts")
@@ -38,14 +36,9 @@ class Studio:
                     print_pause("You've turned the lights on!")
                     break
                 else:
-                    guesses += 1
                     print_pause("There's nothing here!")
                     print_pause(
                         "But you sense there's something "
                         "that want to reach your hand..."
                     )
-
-                    if guesses >= chances:
-                        print_pause("Random death")
-                        print_pause("game over!")
-                        exit()
+                    self.player.loose_health()
