@@ -10,6 +10,7 @@ class Studio(Room):
         super().__init__(player, thehouse)
         self.lights = random.choice([True, False])
         self.door_locked = True
+        self.key_in_book = random.randint(1, 3)
 
     def prompt_light(self):
         switch_position = random.choice(["right", "left", "forward", "backward"])
@@ -87,27 +88,37 @@ class Studio(Room):
         self.pick_a_book()
 
     def book_divine_comedy(self):
+        if self.key_in_book == 1:
+            if "key_studio" not in self.player.items:
+                self.pick_the_key()
+
         print_pause("Amor, ch’a nullo amato amar perdona,")
         print_pause("mi prese del costui piacer sì forte,")
         print_pause("che, come vedi, ancor non m’abbandona")
 
     def book_the_king_in_yellow(self):
-        print_pause(
-            "for I knew that the King in Yellow had opened his "
-            "tattered mantle and there was only God to cry to now."
-        )
+        if self.key_in_book == 2:
+            if "key_studio" not in self.player.items:
+                self.pick_the_key()
+
+        print_pause("for I knew that the King in Yellow")
+        print_pause("had opened his tattered mantle")
+        print_pause("and there was only God to cry to now.")
 
     def book_arkhams_secrets(self):
-        if "key_studio" in self.player.items:
-            print_pause("West of Arkham the hills rise wild,")
-            print_pause("and there are valleys with deep")
-            print_pause("woods that no axe has ever cut.")
-            self.pick_a_book()
-        else:
-            print_pause("You open the book and a key fall onto the ground.")
-            print_pause("You pick the key.")
-            self.player.pick_an_item("key_studio")
-            self.pick_a_book()
+        if self.key_in_book == 3:
+            if "key_studio" not in self.player.items:
+                self.pick_the_key()
+
+        print_pause("West of Arkham the hills rise wild,")
+        print_pause("and there are valleys with deep")
+        print_pause("woods that no axe has ever cut.")
+
+    def pick_the_key(self):
+        print_pause("You open the book and a key fall onto the ground.")
+        print_pause("You pick the key.")
+        self.player.pick_an_item("key_studio")
+        self.pick_a_book()
 
     def pick_a_book(self):
         print_pause("You pick a book:")
