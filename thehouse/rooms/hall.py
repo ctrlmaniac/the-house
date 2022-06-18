@@ -9,7 +9,6 @@ class Hall(Room):
         print_pause("Backwards there's the hallway.")
         # on the left
         # on the right
-        print_pause("Where do you want to go?")
 
         self.move()
 
