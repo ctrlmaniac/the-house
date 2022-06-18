@@ -4,7 +4,8 @@ from helpers import print_pause, validate_input
 
 
 class Studio:
-    def __init__(self):
+    def __init__(self, player):
+        self.player = player
         self.lights = random.choice([True, False])
 
     def intro(self):

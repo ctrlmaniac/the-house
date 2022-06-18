@@ -1,5 +1,7 @@
 from thehouse import TheHouse
+from characters import Player
 
-thehouse = TheHouse()
+player = Player()
+thehouse = TheHouse(player)
 
 thehouse.play_game()

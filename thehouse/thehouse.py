@@ -2,10 +2,12 @@ import rooms
 
 
 class TheHouse:
-    def __init__(self):
+    def __init__(self, player):
+        self.player = player
         self.rooms = {
-            "studio": rooms.Studio(),
+            "studio": rooms.Studio(self.player),
         }
 
     def play_game(self):
-        self.rooms["studio"].intro()
+        while self.player.is_alive():
+            self.rooms["studio"].intro()
