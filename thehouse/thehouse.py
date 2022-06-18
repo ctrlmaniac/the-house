@@ -9,5 +9,6 @@ class TheHouse:
         }
 
     def play_game(self):
-        while self.player.is_alive():
+        while self.player.health > 0:
+            print(self.player.health)
             self.rooms["studio"].intro()

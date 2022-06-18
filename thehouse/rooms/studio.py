@@ -26,7 +26,7 @@ class Studio:
             print_pause("- forward")
             print_pause("- backward")
 
-            while True:
+            while self.player.health > 0:
                 choice = validate_input(
                     "Type right, left, forward or backward: ",
                     ["right", "left", "backward", "forward"],
