@@ -142,6 +142,7 @@ class Studio(Room):
 
             if choice == "yes":
                 if "key_studio" in self.player.items:
+                    self.door_locked = False
                     print_pause("You use the key to unlock the door")
                     print_pause("You exit the studio.")
                     self.thehouse.rooms["hallway"].center()
