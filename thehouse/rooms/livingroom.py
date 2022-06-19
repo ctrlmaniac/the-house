@@ -24,10 +24,10 @@ class Livingroom(Room):
             self.fight_or_escape()
         else:
             print_pause("You're in the livingroom!")
-            print_pause("In front of you there's a painting.")
-            print_pause("On your right there's a door.")
-            print_pause("On your back there's a window.")
-            print_pause("On your left there's another window.")
+            print_pause("- In front of you there's a painting.")
+            print_pause("- On your right there's a door.")
+            print_pause("- On your back there's a window.")
+            print_pause("- On your left there's another window.")
 
             self.move()
 

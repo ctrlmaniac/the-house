@@ -51,10 +51,10 @@ class Studio(Room):
 
         if self.player.is_alive():
             print_pause("You're in the middle of a studio")
-            print_pause("In front of you there's a closed door.")
-            print_pause("On your right there's a window.")
-            print_pause("Behind you there's a desk with some papers on it.")
-            print_pause("On your left there's a shelf with many books on it.")
+            print_pause("- In front of you there's a closed door.")
+            print_pause("- On your right there's a window.")
+            print_pause("- Behind you there's a desk with some papers on it.")
+            print_pause("- On your left there's a shelf with many books on it.")
 
             self.move()
 
