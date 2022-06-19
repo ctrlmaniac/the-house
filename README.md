@@ -16,4 +16,4 @@ or you can download this repository
 
 If you have installed **thehouse** via pip you can call the game and run it by typing `thehouse`.
 
-If you downloaded the repository, on the root of the repo run `python thehouse` and the game will start!
+If you downloaded the repository, on the root of the repo run `python -m thehouse` and the game will start!
