@@ -39,6 +39,7 @@ class Hall(Room):
             and "thehouse_key_3" in self.player.items
         ):
             print_pause("You unlock the door and finally exit the house!")
+            self.player.escaped = True
         else:
             print_pause("You need three keys to open the door!")
             print_pause("You go back.")
