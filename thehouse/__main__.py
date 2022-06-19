@@ -1,3 +1,3 @@
-import play
+from thehouse.play import play
 
-play.play()
+play()

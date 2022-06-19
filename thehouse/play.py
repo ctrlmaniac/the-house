@@ -1,12 +1,11 @@
-import characters
-from helpers import print_pause, validate_input
-
-import thehouse
+from thehouse.characters import Player
+from thehouse.helpers import print_pause, validate_input
+from thehouse.thehouse import TheHouse
 
 
 def play():
-    player = characters.Player()
-    house = thehouse.TheHouse(player)
+    player = Player()
+    house = TheHouse(player)
 
     house.play_game()
 

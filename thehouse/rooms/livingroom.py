@@ -1,7 +1,7 @@
 import random
 
-from characters import Monster
-from helpers import print_pause, validate_input
+from thehouse.characters import Monster
+from thehouse.helpers import print_pause, validate_input
 
 from .room import Room
 

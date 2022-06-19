@@ -1,6 +1,6 @@
 import random
 
-from helpers import print_pause, validate_input
+from thehouse.helpers import print_pause, validate_input
 
 from .room import Room
 
