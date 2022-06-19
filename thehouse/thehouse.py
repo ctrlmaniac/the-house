@@ -1,8 +1,7 @@
 import random
 
 import rooms
-from helpers import print_pause, random_death, validate_input
-from characters import Player
+from helpers import print_pause, random_death
 
 
 class TheHouse:
@@ -40,22 +39,3 @@ class TheHouse:
             if self.player.escaped:
                 print("Congratulations! You beat the game!")
                 break
-
-
-def play():
-    player = Player()
-    thehouse = TheHouse(player)
-
-    thehouse.play_game()
-
-    print_pause("Do you want to play again?")
-    choice = validate_input("Type yes or no: ", ["yes", "no"])
-
-    if choice == "yes":
-        play()
-    else:
-        quit()
-
-
-if __name__ == "__main__":
-    play()
