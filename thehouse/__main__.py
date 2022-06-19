@@ -1,3 +1,0 @@
-import thehouse
-
-thehouse.play()
