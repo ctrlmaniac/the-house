@@ -11,7 +11,7 @@ classifiers = [
 ]
 
 [tool.poetry.scripts]
-thehouse = "thehouse.thehouse:play"
+thehouse = "thehouse.play:play"
 
 [tool.isort]
 profile = "black"
