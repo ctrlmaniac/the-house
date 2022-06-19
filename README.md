@@ -10,7 +10,7 @@ A text-based game written in python
 
 You can install the game with pip by typing `pip install thehouse`
 
-or you can download this repository and
+or you can download this repository
 
 ## Play
 
