@@ -16,7 +16,3 @@ def play():
         play()
     else:
         quit()
-
-
-if __name__ == "__main__":
-    play()
