@@ -57,9 +57,7 @@ class Livingroom(Room):
                 print_pause("It's the monster's turn to deal damages!")
                 self.monster.deals_damage()
 
-                if not self.player.is_alive():
-                    break
-                else:
+                if self.player.is_alive():
                     choice = validate_input(
                         "Type fight or escape: ", ["fight", "escape"]
                     )
@@ -70,6 +68,8 @@ class Livingroom(Room):
                     else:
                         self.escape()
                         break
+                else:
+                    break
             else:
                 print_pause("You successfully killed the monster!")
                 self.center()
@@ -89,11 +89,14 @@ class Livingroom(Room):
             self.tries -= 1
 
             if self.tries <= 0:
-                print_pause("The monster reached you!")
+                print_pause("The monster has reached you!")
                 self.monster.deals_damage()
                 self.tries = random.randint(3, 6)
 
-            self.fight_or_escape()
+                if self.player.is_alive():
+                    self.fight_or_escape()
+            else:
+                self.fight_or_escape()
 
     """ RIGHT """
 
