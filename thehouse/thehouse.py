@@ -34,8 +34,9 @@ class TheHouse:
 
             if not self.player.is_alive():
                 random_death()
+                print_pause("\n=== GAME OVER ===\n", 3)
                 break
 
             if self.player.escaped:
-                print("Congratulations! You beat the game!")
+                print("\nCongratulations! You beat the game!\n")
                 break
