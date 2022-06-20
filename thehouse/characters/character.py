@@ -16,7 +16,7 @@ class Character:
         self.print_health()
 
     def restore_health(self):
-        self.heath = self.max_health
+        self.health = self.max_health
         self.print_health()
 
     def print_health(self):
