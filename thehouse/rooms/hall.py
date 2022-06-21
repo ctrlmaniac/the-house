@@ -21,13 +21,13 @@ class Hall(Room):
     """ LEFT """
 
     def left(self):
-        print_pause("You open the door and enter the room")
+        print_pause("You open the door and enter the room.")
         self.thehouse.rooms["kitchen"].center()
 
     """ RIGHT """
 
     def right(self):
-        print_pause("You open the door and enter the room")
+        print_pause("You open the door and enter the room.")
         self.thehouse.rooms["diningroom"].center()
 
     """ FORWARD """

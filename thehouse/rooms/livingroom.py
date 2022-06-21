@@ -41,6 +41,7 @@ class Livingroom(Room):
             self.escape()
 
     def fight(self):
+        """Lets the user fight the monster"""
         while self.monster.is_alive:
             print_pause("It's your turn to deal damages!")
 
@@ -51,7 +52,7 @@ class Livingroom(Room):
                 damage = random.randint(2, 4)
 
             print_pause(f"You deal {damage} damage.")
-            self.monster.loose_health(damage)
+            self.monster.lose_health(damage)
 
             if self.monster.is_alive:
                 print_pause("It's the monster's turn to deal damages!")
@@ -75,6 +76,7 @@ class Livingroom(Room):
                 self.center()
 
     def escape(self):
+        """Lets the user try to escape the monster"""
         print_pause("You're trying to escape the monster!")
 
         choice = validate_input(

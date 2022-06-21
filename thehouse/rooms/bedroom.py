@@ -11,6 +11,7 @@ class Bedroom(Room):
         self.key_in_drawer = random.randint(1, 5)
 
     def center(self):
+        """Prints some messages and explain how the room is made"""
         print_pause("You're in the bedroom!")
         print_pause("- In front of you there's a dresser.")
         print_pause("- On your right there's a window.")
@@ -22,6 +23,7 @@ class Bedroom(Room):
     """ LEFT """
 
     def left(self):
+        print_pause("You open the door and enter the room.")
         self.thehouse.rooms["hallway"].center()
 
     """ BACKWARD """
@@ -69,6 +71,7 @@ class Bedroom(Room):
         self.pick_a_drawer()
 
     def pick_a_drawer(self):
+        """Lets the user pick a drawer"""
         choice = validate_input(
             "Type a number between 1 and 5 included, or back: ",
             ["1", "2", "3", "4", "5", "back"],
@@ -92,7 +95,7 @@ class Bedroom(Room):
             else:
                 print_pause("There's nothing between the clothes.")
                 print_pause("Something from the outside is moving...")
-                self.player.loose_health()
+                self.player.lose_health()
 
             if self.player.is_alive:
                 self.pick_a_drawer()

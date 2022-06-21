@@ -55,6 +55,9 @@ class Kitchen(Room):
         self.pick_a_drawer("backward")
 
     def pick_a_drawer(self, wall):
+        """Lets the user pick a drawer
+        :param wall: the wall where the knife is located
+        """
         choice = validate_input(
             "Type a number between 1 and 3 included, or back: ",
             ["1", "2", "3", "back"],

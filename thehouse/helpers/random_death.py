@@ -10,4 +10,6 @@ DEATHS = [
 
 
 def random_death():
+    """Prints a random death from DEATHS variable"""
     print_pause(random.choice(DEATHS), 3)
+    print_pause("\n\n=== GAME OVER ===\n\n")

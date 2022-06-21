@@ -35,9 +35,11 @@ class Hallway(Room):
     """ RIGHT """
 
     def right(self):
+        print_pause("You open the door and enter the room.")
         self.thehouse.rooms["bedroom"].center()
 
     """ LEFT """
 
     def left(self):
+        print_pause("You open the door and enter the room.")
         self.thehouse.rooms["livingroom"].center()

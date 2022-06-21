@@ -19,6 +19,7 @@ class Room:
         pass
 
     def move(self):
+        """Lets the user move inside or outside the room"""
         print_pause("Where do you want to go?")
 
         choice = validate_input(

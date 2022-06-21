@@ -37,7 +37,7 @@ class Studio(Room):
                 print_pause(
                     "But you sense there's something that want to reach your hand..."
                 )
-                self.player.loose_health()
+                self.player.lose_health()
 
     """ CENTER """
 
@@ -161,7 +161,7 @@ class Studio(Room):
             else:
                 print_pause("You hear something from the other side of the door!")
                 print_pause("You instantly go back!")
-                self.player.loose_health()
+                self.player.lose_health()
 
                 if self.player.is_alive:
                     self.move()

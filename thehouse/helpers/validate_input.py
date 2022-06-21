@@ -1,4 +1,7 @@
 def validate_input(prompt, options):
+    """Validates the input from the user
+    :param options: a list of eligible options
+    """
     while True:
         option = input(prompt).lower()
 

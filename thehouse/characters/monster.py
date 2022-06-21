@@ -9,6 +9,7 @@ class Monster(Character):
         self.player = player
 
     def deals_damage(self):
+        """Deals random damage"""
         damage = random.randint(1, 2)
 
         self.player.loose_health(damage)
