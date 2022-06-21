@@ -19,7 +19,7 @@ class TheHouse:
         self.current_room = random.choice(list(self.rooms.keys()))
 
     def play_game(self):
-        while not self.player.escaped or self.player.is_alive():
+        while not self.player.escaped or self.player.is_alive:
             print_pause("\n\n=== THE HOUSE ===\n\n", 3)
 
             print_pause("Someone, or something hit you and you faint.")
@@ -32,7 +32,7 @@ class TheHouse:
 
             self.rooms[self.current_room].center()
 
-            if not self.player.is_alive():
+            if not self.player.is_alive:
                 random_death()
                 print_pause("\n=== GAME OVER ===\n", 3)
                 break

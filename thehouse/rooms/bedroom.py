@@ -94,5 +94,5 @@ class Bedroom(Room):
                 print_pause("Something from the outside is moving...")
                 self.player.loose_health()
 
-            if self.player.is_alive():
+            if self.player.is_alive:
                 self.pick_a_drawer()

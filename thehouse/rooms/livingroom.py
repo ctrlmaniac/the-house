@@ -15,7 +15,7 @@ class Livingroom(Room):
         self.safe_combination = random.randint(1, 5)
 
     def center(self):
-        if self.monster.is_alive():
+        if self.monster.is_alive:
             print_pause("There's a terrible monster!")
             print_pause("It's half human and half something undescribable!")
             print_pause(
@@ -41,7 +41,7 @@ class Livingroom(Room):
             self.escape()
 
     def fight(self):
-        while self.monster.is_alive():
+        while self.monster.is_alive:
             print_pause("It's your turn to deal damages!")
 
             if "knife" not in self.player.items:
@@ -53,11 +53,11 @@ class Livingroom(Room):
             print_pause(f"You deal {damage} damage.")
             self.monster.loose_health(damage)
 
-            if self.monster.is_alive():
+            if self.monster.is_alive:
                 print_pause("It's the monster's turn to deal damages!")
                 self.monster.deals_damage()
 
-                if self.player.is_alive():
+                if self.player.is_alive:
                     choice = validate_input(
                         "Type fight or escape: ", ["fight", "escape"]
                     )
@@ -93,7 +93,7 @@ class Livingroom(Room):
                 self.monster.deals_damage()
                 self.tries = random.randint(3, 6)
 
-                if self.player.is_alive():
+                if self.player.is_alive:
                     self.fight_or_escape()
             else:
                 self.fight_or_escape()

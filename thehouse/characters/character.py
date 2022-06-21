@@ -8,6 +8,7 @@ class Character:
         self.max_health = random.randint(5, 10)
         self.health = self.max_health
 
+    @property
     def is_alive(self):
         return True if self.health > 0 else False
 

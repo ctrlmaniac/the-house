@@ -49,7 +49,7 @@ class Studio(Room):
         if not self.lights:
             self.prompt_light()
 
-        if self.player.is_alive():
+        if self.player.is_alive:
             print_pause("You're in the middle of a studio")
             print_pause("- In front of you there's a closed door.")
             print_pause("- On your right there's a window.")
@@ -163,5 +163,5 @@ class Studio(Room):
                 print_pause("You instantly go back!")
                 self.player.loose_health()
 
-                if self.player.is_alive():
+                if self.player.is_alive:
                     self.move()
