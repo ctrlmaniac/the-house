@@ -11,6 +11,9 @@ class Kitchen(Room):
         self.knife_in_drawer = random.randint(1, 3)
         self.knife_on_wall = random.choice(["left", "backward"])
 
+    def __str__(self):
+        return "Kitchen"
+
     def center(self):
         print_pause("You're in the kitchen!")
         print_pause("- In front of you there's a window")

@@ -12,6 +12,9 @@ class Studio(Room):
         self.door_locked = True
         self.key_in_book = random.randint(1, 3)
 
+    def __str__(self):
+        return "Studio"
+
     def prompt_light(self):
         switch_position = random.choice(["right", "left", "forward", "backward"])
 

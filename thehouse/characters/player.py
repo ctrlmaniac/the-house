@@ -7,6 +7,15 @@ class Player(Character):
         self.escaped = False
         self.items = []
 
+    def __str__(self):
+        return f"Player - health: {self.health}; escaped {self.escaped}"
+
+    def __len__(self):
+        return len(self.items)
+
+    def __contains__(self, item):
+        return item in self.items
+
     def escape_the_house(self):
         """Lets the Player escape the house"""
         self.escaped = True

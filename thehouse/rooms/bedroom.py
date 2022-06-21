@@ -10,6 +10,9 @@ class Bedroom(Room):
         super().__init__(player, thehouse)
         self.key_in_drawer = random.randint(1, 5)
 
+    def __str__(self):
+        return "Bedroom"
+
     def center(self):
         """Prints some messages and explain how the room is made"""
         print_pause("You're in the bedroom!")

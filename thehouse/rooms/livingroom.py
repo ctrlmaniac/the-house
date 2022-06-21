@@ -14,6 +14,9 @@ class Livingroom(Room):
         self.safe_open = False
         self.safe_combination = random.randint(1, 5)
 
+    def __str__(self):
+        return "Livingroom"
+
     def center(self):
         if self.monster.is_alive:
             print_pause("There's a terrible monster!")

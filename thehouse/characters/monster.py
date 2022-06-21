@@ -8,6 +8,9 @@ class Monster(Character):
         super().__init__()
         self.player = player
 
+    def __str__(self):
+        return f"Monster - health: {self.health}"
+
     def deals_damage(self):
         """Deals random damage"""
         damage = random.randint(1, 2)

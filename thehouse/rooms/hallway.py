@@ -4,6 +4,9 @@ from .room import Room
 
 
 class Hallway(Room):
+    def __str__(self):
+        return "Hallway"
+
     def center(self):
         print_pause("You are in the hallway.")
         print_pause("- In front of you there's the hall of the house.")

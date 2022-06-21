@@ -10,6 +10,9 @@ class Diningroom(Room):
         super().__init__(player, thehouse)
         self.key_in_corpse = random.choice(["forward", "left", "backward"])
 
+    def __str__(self):
+        return "Diningroom"
+
     def center(self):
         print_pause("You're in the diningroom!")
         print_pause("There's a bloody mess here...")
