@@ -43,7 +43,7 @@ class Room:
 
         choice = validate_input(
             'Type "forward", "right", "backward", "left", "help": ',
-            ["right", "left", "forward", "backward"],
+            ["right", "left", "forward", "backward", "help"],
         )
 
         if choice == "right":
