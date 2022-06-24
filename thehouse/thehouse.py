@@ -18,7 +18,10 @@ class TheHouse:
         self.player = player
 
         # Rooms
-        self.rooms = {"studio": rooms.Studio(self.player, self)}
+        self.rooms = {
+            "studio": rooms.Studio(self.player, self),
+            "hallway": rooms.Hallway(self.player, self),
+        }
 
         # Pick a random room
         self.current_room = random.choice(list(self.rooms.keys()))
