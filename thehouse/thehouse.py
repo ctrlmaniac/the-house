@@ -20,6 +20,7 @@ class TheHouse:
         # Rooms
         self.rooms = {
             "bedroom": rooms.Bedroom(self.player, self),
+            "hall": rooms.Hall(self.player, self),
             "hallway": rooms.Hallway(self.player, self),
             "studio": rooms.Studio(self.player, self),
         }
