@@ -43,7 +43,7 @@ class Room:
 
         choice = validate_input(
             'Type "forward", "right", "backward", "left", "help": ',
-            ["right", "left", "forward", "backward", "help", "items"],
+            ["right", "left", "forward", "backward", "help"],
         )
 
         if choice == "right":
@@ -56,7 +56,3 @@ class Room:
             self.forward()
         elif choice == "help":
             self.blueprint()
-        elif choice == "items":
-            for item in self.player.items:
-                print_pause(f"- {item}")
-            self.move()
