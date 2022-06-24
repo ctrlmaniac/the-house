@@ -8,9 +8,12 @@ from thehouse.helpers import print_pause
 class TheHouse:
     """TheHouse."""
 
-    def __init__(self):
-        """Inizialize class."""
-        pass
+    def __init__(self, player):
+        """Inizialize class.
+
+        :param player: the instantiated player class.
+        """
+        self.player = player
 
     def play(self):
         """Play engine."""
