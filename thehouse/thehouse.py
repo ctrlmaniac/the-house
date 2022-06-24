@@ -23,6 +23,7 @@ class TheHouse:
             "hall": rooms.Hall(self.player, self),
             "hallway": rooms.Hallway(self.player, self),
             "kitchen": rooms.Kitchen(self.player, self),
+            "livingroom": rooms.Livingroom(self.player, self),
             "studio": rooms.Studio(self.player, self),
         }
 

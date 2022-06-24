@@ -88,11 +88,11 @@ class Kitchen(Room):
 
             if wall == self.knife_on_wall and int(choice) == self.knife_in_drawer:
                 if "knife" in self.player.items:
-                    print_pause("You've already picked a knife from this drawer!")
+                    print_pause("You've already picked a KNIFE from this drawer!")
                     print_pause("There's nothing more in it.")
                 else:
-                    print_pause("You've found a knife!")
-                    self.player.pick_an_item("knife")
+                    print_pause("You've found a KNIFE!")
+                    self.player.pick_an_item("KNIFE")
             else:
                 print_pause("There's nothing useful here...")
 

@@ -3,6 +3,7 @@ from .bedroom import Bedroom
 from .hall import Hall
 from .hallway import Hallway
 from .kitchen import Kitchen
+from .livingroom import Livingroom
 from .studio import Studio
 
 

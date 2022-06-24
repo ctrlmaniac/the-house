@@ -92,10 +92,13 @@ class Studio(Room):
         self.move()
 
     def right(self):
+        combination = self.thehouse.rooms["livingroom"].safe_combination
+
         """Print the content of the right side."""
         print_pause("The desk is so full of papers")
-        print_pause("There's nothing particular here. You go back.")
-        # TODO: add a note where the combination of the safe is written
+        print_pause("There's a note on the desk.")
+        print_pause(f"It says: {combination}")
+        print_pause("You go back.")
         self.move()
 
     def left(self):
