@@ -1,10 +1,10 @@
 """Livingroom.
 
 Sides:
-- FORWARD: safe
-- RIGHT: door to the halllway
-- BACKWARD: window
-- LEFT: window
+- FORWARD: safe.
+- RIGHT: door to the halllway.
+- BACKWARD: window.
+- LEFT: window.
 """
 import random
 
@@ -15,6 +15,8 @@ from .room import Room
 
 
 class Livingroom(Room):
+    """Livingroom."""
+
     def __init__(self, player, thehouse):
         """Initialize class.
 

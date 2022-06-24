@@ -14,8 +14,10 @@ from .room import Room
 
 
 class Kitchen(Room):
+    """Kitchen."""
+
     def __init__(self, player, thehouse):
-        """Initialize class
+        """Initialize class.
 
         :param player: the instantiated Player class.
         :param thehouse: the instantiated TheHouse class.

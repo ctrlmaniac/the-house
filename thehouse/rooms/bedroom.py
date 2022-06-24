@@ -1,10 +1,10 @@
 """BEDROOM.
 
 Sides:
-- FORWARD: dresser
-- RIGHT: window
-- BACKWARD: bed
-- LEFT: door to the hallway
+- FORWARD: dresser.
+- RIGHT: window.
+- BACKWARD: bed.
+- LEFT: door to the hallway.
 """
 import random
 
@@ -30,6 +30,7 @@ class Bedroom(Room):
         return "Bedroom"
 
     def blueprint(self) -> None:
+        """Print the blueprint of the room."""
         print_pause("- In front of you there's a dresser.")
         print_pause("- On your right there's a window.")
         print_pause("- Backwards there's a bed.")
@@ -37,7 +38,7 @@ class Bedroom(Room):
         self.move()
 
     def center(self):
-        """Print welcome message"""
+        """Print welcome message."""
         print_pause("You're in the bedroom!")
         self.blueprint()
 
@@ -88,7 +89,7 @@ class Bedroom(Room):
         self.pick_a_drawer()
 
     def pick_a_drawer(self):
-        """Let the user pick a drawer"""
+        """Let the user pick a drawer."""
         choice = validate_input(
             "Type a number between 1 and 5 included, or back: ",
             ["1", "2", "3", "4", "5", "back"],

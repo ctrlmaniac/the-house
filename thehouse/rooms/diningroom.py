@@ -14,6 +14,8 @@ from .room import Room
 
 
 class Diningroom(Room):
+    """Diningroom."""
+
     def __init__(self, player, thehouse):
         """Initialize class.
 

@@ -92,6 +92,7 @@ class Studio(Room):
         self.move()
 
     def backward(self):
+        """Print the content of the back side."""
         combination = self.thehouse.rooms["livingroom"].safe_combination
 
         """Print the content of the right side."""

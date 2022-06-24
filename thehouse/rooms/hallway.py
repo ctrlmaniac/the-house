@@ -1,10 +1,10 @@
 """Hallway.
 
 Sides:
-- FORWARD: the hall
-- RIGHT: door to the bedroom
-- BACKWARD: door to the studio
-- LEFT: door to the livingroom
+- FORWARD: the hall.
+- RIGHT: door to the bedroom.
+- BACKWARD: door to the studio.
+- LEFT: door to the livingroom.
 """
 from thehouse.helpers import print_pause, validate_input
 
@@ -12,6 +12,8 @@ from .room import Room
 
 
 class Hallway(Room):
+    """Hallway."""
+
     def __str__(self):
         """Return the name of the room."""
         return "Hallway"
@@ -48,8 +50,7 @@ class Hallway(Room):
         self.thehouse.rooms["hall"].center()
 
     def right(self):
-        """Move player to the bedroom"""
-
+        """Move player to the bedroom."""
         if "PASSPARTOUT" not in self.player.items:
             print_pause("There's a little table and a door.")
             print_pause("Do you want to open the door or check the table?")
@@ -75,6 +76,6 @@ class Hallway(Room):
         self.move()
 
     def left(self):
-        """Move player to the livingroom"""
+        """Move player to the livingroom."""
         print_pause("You open the door and enter the room.")
         self.thehouse.rooms["livingroom"].center()

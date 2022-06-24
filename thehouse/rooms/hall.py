@@ -32,7 +32,7 @@ class Hall(Room):
         self.blueprint()
 
     def backward(self):
-        """Move the player to the hallway"""
+        """Move the player to the hallway."""
         self.thehouse.rooms["hallway"].center()
 
     def left(self):
@@ -46,7 +46,7 @@ class Hall(Room):
         self.thehouse.rooms["diningroom"].center()
 
     def forward(self):
-        """Move the player towards the main door of the house"""
+        """Move the player towards the main door of the house."""
         if (
             "THE HOUSE KEY 1" in self.player.items
             and "THE HOUSE KEY 2" in self.player.items
