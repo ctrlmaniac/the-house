@@ -68,7 +68,7 @@ class Livingroom(Room):
             print_pause("It's your turn to deal damages!")
 
             if "KNIFE" not in self.player.items:
-                damage = 4
+                damage = 1
                 print_pause("It seems like you need something to deal more damages!")
             else:
                 damage = random.randint(2, 4)
@@ -160,8 +160,6 @@ class Livingroom(Room):
     def break_open(self):
         """Let the user break open the safe."""
         print_pause("You need a combination!")
-
-        print(self.safe_combination)
 
         choice = validate_input(
             "Pick a combination between 0000 and 9999 included: ",

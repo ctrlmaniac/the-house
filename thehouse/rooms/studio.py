@@ -83,7 +83,7 @@ class Studio(Room):
             print_pause("You're in the middle of a studio")
             self.blueprint()
 
-    def backward(self) -> None:
+    def right(self) -> None:
         """Print the content of the backward side."""
         print_pause("On your back there's a window.")
         print_pause("You have a glimpse outside but it's pitch black.")
@@ -91,7 +91,7 @@ class Studio(Room):
         print_pause("You go back.")
         self.move()
 
-    def right(self):
+    def backward(self):
         combination = self.thehouse.rooms["livingroom"].safe_combination
 
         """Print the content of the right side."""

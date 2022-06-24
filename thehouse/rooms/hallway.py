@@ -49,16 +49,21 @@ class Hallway(Room):
 
     def right(self):
         """Move player to the bedroom"""
-        print_pause("There's a little table and a door.")
-        print_pause("Do you want to open the door or check the table?")
 
-        choice = validate_input('Type "table" or "door": ', ["table", "door"])
+        if "PASSPARTOUT" not in self.player.items:
+            print_pause("There's a little table and a door.")
+            print_pause("Do you want to open the door or check the table?")
 
-        if choice == "door":
+            choice = validate_input('Type "table" or "door": ', ["table", "door"])
+
+            if choice == "door":
+                print_pause("You open the door and enter the room.")
+                self.thehouse.rooms["bedroom"].center()
+            else:
+                self.table()
+        else:
             print_pause("You open the door and enter the room.")
             self.thehouse.rooms["bedroom"].center()
-        else:
-            self.table()
 
     def table(self):
         """Let the user check if there's something inside the table."""
