@@ -10,9 +10,14 @@ def validate_input(prompt, options):
     :param options: a list of eligible options.
     """
     while True:
-        option = input(prompt).lower()
+        try:
+            option = input(prompt).lower()
+        except KeyboardInterrupt:
+            quit()
 
         if option in options:
             return option
+        elif option == "quit":
+            quit()
 
         print("Sorry, I didn't understand! Try Again!")

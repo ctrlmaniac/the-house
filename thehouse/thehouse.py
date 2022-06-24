@@ -14,4 +14,4 @@ class TheHouse:
 
     def play(self):
         """Play engine."""
-        print_pause("Ciao!", "test")
+        print_pause("Ciao!")
