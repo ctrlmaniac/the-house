@@ -19,8 +19,9 @@ class TheHouse:
 
         # Rooms
         self.rooms = {
-            "studio": rooms.Studio(self.player, self),
+            "bedroom": rooms.Bedroom(self.player, self),
             "hallway": rooms.Hallway(self.player, self),
+            "studio": rooms.Studio(self.player, self),
         }
 
         # Pick a random room
