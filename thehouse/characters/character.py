@@ -1,6 +1,7 @@
 """Character blueprint."""
-from thehouse.helpers import print_pause
 import random
+
+from thehouse.helpers import print_pause
 
 
 class Character:

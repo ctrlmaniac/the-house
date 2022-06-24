@@ -1,8 +1,8 @@
 """This file is responsible of exporting all characters."""
-from .player import Player
 from .monster import Monster
+from .player import Player
 
 __all__ = [
-    "Player",
     "Monster",
+    "Player",
 ]
