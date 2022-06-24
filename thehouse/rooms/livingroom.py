@@ -147,7 +147,7 @@ class Livingroom(Room):
     def forward(self):
         """Move the user towards the safe."""
         if self.safe_open:
-            print_pause("You opened the safe already and picked a key.")
+            print_pause("You opened the safe already and picked THE HOUSE KEY 3.")
             print_pause("You go back.")
         else:
             print_pause("There's a painting...")

@@ -67,13 +67,13 @@ class Diningroom(Room):
         print_pause("You check its pocket")
 
         if self.key_in_corpse == "left":
-            if "thehouse_key_2" in self.player.items:
+            if "THE HOUSE KEY 2" in self.player.items:
                 print_pause("You already checked its pocket and found a key!")
                 print_pause("You go back!")
             else:
                 print_pause("You have found a key!")
-                self.player.pick_an_item("thehouse_key_2")
-                print_pause("You pick the key and go back.")
+                self.player.pick_an_item("THE HOUSE KEY 2")
+                print_pause("You pick THE HOUSE KEY 2 and go back.")
         else:
             print_pause("There's nothing inside its pocket. You go back.")
 
@@ -86,13 +86,13 @@ class Diningroom(Room):
         print_pause("You check its pocket")
 
         if self.key_in_corpse == "backward":
-            if "thehouse_key_2" in self.player.items:
+            if "THE HOUSE KEY 2" in self.player.items:
                 print_pause("You already checked its pocket and found a key!")
                 print_pause("You go back!")
             else:
                 print_pause("You have found a key!")
-                self.player.pick_an_item("thehouse_key_2")
-                print_pause("You pick the key and go back.")
+                self.player.pick_an_item("THE HOUSE KEY 2")
+                print_pause("You pick THE HOUSE KEY 2 and go back.")
         else:
             print_pause("There's nothing inside its pocket. You go back.")
 
