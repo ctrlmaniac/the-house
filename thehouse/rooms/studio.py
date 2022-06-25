@@ -180,7 +180,10 @@ class Studio(Room):
             choice = validate_input("Type yes or no: ", ["yes", "no"])
 
             if choice == "yes":
-                if "THE STUDIO KEY" in self.player.items:
+                if (
+                    "THE STUDIO KEY" in self.player.items
+                    or "PASSEPARTOUT" in self.player.items
+                ):
                     self.door_locked = False
                     print_pause("You use the key to unlock the door")
                     print_pause("You exit the studio.")
