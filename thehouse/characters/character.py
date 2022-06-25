@@ -35,3 +35,11 @@ class Character:
         health = "*" * self.health
         pt_lost = "-" * (self.max_health - self.health)
         print_pause(f"Health: {health}{pt_lost}")
+
+    def print_items(self) -> None:
+        """Print a list of items."""
+        if not len(self.items):
+            print_pause("Your pockets are empty!")
+        else:
+            for item in self.items:
+                print_pause(f"- {item}")
