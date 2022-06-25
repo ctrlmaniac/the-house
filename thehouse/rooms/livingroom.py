@@ -164,7 +164,7 @@ class Livingroom(Room):
         print_pause("You need a combination!")
 
         choice = validate_input(
-            "Pick a combination between 0000 and 9999 included: ",
+            "Pick a combination between 0000 and 9999 included, or type back: ",
             [str(self.safe_combination), "back"],
         )
 
