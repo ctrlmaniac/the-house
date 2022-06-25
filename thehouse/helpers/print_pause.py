@@ -11,9 +11,13 @@ def print_pause(string, sleep=1):
 
     :param sleep: the amount of seconds the terminal should sleep as integer.
     """
-    print(string)
-
     try:
-        time.sleep(sleep)
-    except TypeError:
-        time.sleep(1)
+        print(string)
+
+        try:
+            time.sleep(sleep)
+        except TypeError:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        print_pause("Goodbye!")
+        quit()
