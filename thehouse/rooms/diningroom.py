@@ -57,7 +57,6 @@ class Diningroom(Room):
             else:
                 print_pause("You have found a key!")
                 self.player.pick_an_item("THE HOUSE KEY 2")
-                print_pause("You pick THE HOUSE KEY 2 and go back.")
         else:
             print_pause("There's nothing inside its pocket. You go back.")
 
@@ -75,7 +74,6 @@ class Diningroom(Room):
             else:
                 print_pause("You have found a key!")
                 self.player.pick_an_item("THE HOUSE KEY 2")
-                print_pause("You pick THE HOUSE KEY 2 and go back.")
         else:
             print_pause("There's nothing inside its pocket. You go back.")
 
@@ -94,7 +92,6 @@ class Diningroom(Room):
             else:
                 print_pause("You have found a key!")
                 self.player.pick_an_item("THE HOUSE KEY 2")
-                print_pause("You pick THE HOUSE KEY 2 and go back.")
         else:
             print_pause("There's nothing inside its pocket. You go back.")
 

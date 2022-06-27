@@ -69,10 +69,9 @@ class Hallway(Room):
     def table(self):
         """Let the user check if there's something inside the table."""
         print_pause("You open the drawer and find a key.")
-        print_pause("You pick a PASSEPARTOUT!")
-        print_pause("You go back.")
         self.player.pick_an_item("PASSEPARTOUT")
         self.thehouse.rooms["studio"].door_locked = False
+        print_pause("You go back.")
         self.move()
 
     def left(self):

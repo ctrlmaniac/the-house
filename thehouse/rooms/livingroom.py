@@ -174,7 +174,6 @@ class Livingroom(Room):
             if int(choice) == self.safe_combination:
                 print_pause("You successfully opened the safe!")
                 print_pause("Inside there's a key!")
-                print_pause("You pick THE HOUSE KEY 3 and go back!")
                 self.player.pick_an_item("THE HOUSE KEY 3")
                 self.safe_open = True
 

@@ -109,7 +109,6 @@ class Bedroom(Room):
                     print_pause("There's nothing more in it.")
                 else:
                     print_pause("You've found a key!")
-                    print_pause("You pick THE HOUSE KEY 1")
                     self.player.pick_an_item("THE HOUSE KEY 1")
             else:
                 print_pause("There's nothing between the clothes.")

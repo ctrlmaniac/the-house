@@ -1,4 +1,5 @@
 """Player."""
+from thehouse.helpers.print_pause import print_pause
 from .character import Character
 
 
@@ -35,3 +36,4 @@ class Player(Character):
         :param item: an item as a string.
         """
         self.items.append(item)
+        print_pause(f"You pick {item}!")

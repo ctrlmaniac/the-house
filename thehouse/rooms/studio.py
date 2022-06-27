@@ -144,7 +144,6 @@ class Studio(Room):
     def pick_the_key(self):
         """Add the key into the player's items."""
         print_pause("You open the book and a key fall onto the ground.")
-        print_pause("You pick THE STUDIO KEY.")
         self.player.pick_an_item("THE STUDIO KEY")
         self.pick_a_book()
 
