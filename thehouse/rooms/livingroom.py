@@ -97,6 +97,9 @@ class Livingroom(Room):
                     break
             else:
                 print_pause("You successfully killed the monster!")
+                print_pause("The monster has dropped a key.")
+                self.player.pick_an_item("PASSEPARTOUT")
+                self.thehouse.rooms["studio"].door_locked = False
                 self.center()
 
     def escape(self):
