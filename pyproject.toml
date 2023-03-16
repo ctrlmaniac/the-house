@@ -17,10 +17,9 @@ thehouse = "thehouse.play:play"
 profile = "black"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.11"
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.2"
 commitizen = "^2.27.1"
 black = "^22.3.0"
 flake8 = "^4.0.1"
